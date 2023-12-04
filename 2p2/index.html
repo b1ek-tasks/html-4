@@ -11,7 +11,6 @@
         <title>2P1 - A grid repeater with numbers</title>
         <style>
             :root {
-
                 --color-1: #366c7b;
                 --color-2: #89b5c0;
 
@@ -68,6 +67,29 @@
                 overflow-y: scroll;
 
                 z-index: 1;
+            }
+        </style>
+
+        <style>
+            @media (max-width:1000px) {
+                html, body {
+                    font-size: 90%;
+                }
+                .grid-repeater {
+                    margin: 5em auto;
+                }
+                .grid-repeater-box {
+                    width: 260px; height: 240px;
+                }
+            }
+            @media (max-width:667px) {
+                .grid-repeater {
+                    grid-template-columns: repeat(1, calc(50% - 12px));
+                }
+                .grid-repeater-box {
+                    width: 80vw; height: 320px;
+                    padding: 10px 20px;
+                }
             }
         </style>
     </head>
