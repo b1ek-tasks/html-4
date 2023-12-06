@@ -48,6 +48,13 @@
                 margin: 0 auto;
 
                 clip-path: inset(0 0 0 0);
+
+                transition: 250ms ease;
+            }
+            @media (max-width: 1700px) {
+                .stripe {
+                    width: 90%;
+                }
             }
 
             .stripe h1 {
@@ -64,6 +71,25 @@
                 grid-template-columns: repeat(3, calc(33.3333% - 20px));
                 grid-gap: 30px;
                 gap: 30px
+            }
+            @media (max-width: 1000px) {
+                .stripe {
+                    width: 100%;
+                }
+                .grid {
+                    grid-template-columns: repeat(2, calc(50% - 20px));
+                }
+                .important-block {
+                    animation: block-fade-in 1.75s ease !important;
+                }
+                .block {
+                    animation-delay: 0s !important;
+                }
+            }
+            @media (max-width: 667px) {
+                .grid {
+                    grid-template-columns: repeat(1, calc(100% - 20px));
+                }
             }
 
             .block {
